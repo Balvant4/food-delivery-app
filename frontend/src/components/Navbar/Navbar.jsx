@@ -1,0 +1,29 @@
+import React from "react";
+import { assets } from "../../assets/assets.js";
+import { navItems } from "./index.js";
+import { Link } from "react-router-dom";
+
+function Navbar() {
+  return (
+    <div className="flex justify-between items-center py-5">
+      <img src={assets.logo} alt="" className="w-[150px]" />
+      <ul className="flex list-none gap-5 text-[#49557e] text-2xl cursor-pointer">
+        {navItems.map(({ link, path }) => (
+          <li key={path}>
+            <Link to={path}>{link}</Link>
+          </li>
+        ))}
+      </ul>
+      <div className="flex items-center gap-6">
+        <img src={assets.search_icon} alt="Search Icon" />
+        <div>
+          <img src={assets.basket_icon} alt="Basket Icon" />
+          <div></div>
+        </div>
+        <button className="btn rounded-3xl text-xl font-normal">Sign In</button>
+      </div>
+    </div>
+  );
+}
+
+export default Navbar;
