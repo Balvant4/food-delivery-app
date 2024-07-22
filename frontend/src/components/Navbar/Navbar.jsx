@@ -2,6 +2,7 @@ import React from "react";
 import { assets } from "../../assets/assets.js";
 import { navItems } from "./index.js";
 import { Link } from "react-router-dom";
+import { Button } from "flowbite-react";
 
 function Navbar() {
   return (
@@ -20,7 +21,9 @@ function Navbar() {
           <img src={assets.basket_icon} alt="Basket Icon" />
           <div></div>
         </div>
-        <button className="btn rounded-3xl text-xl font-normal">Sign In</button>
+        <Button color="warning" className=" rounded-2xl">
+          sign in
+        </Button>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "flowbite-react";
 
 function Hero() {
   return (
@@ -15,7 +16,7 @@ function Hero() {
           praesentium soluta! Culpa soluta magni, eos temporibus enim pariatur
           impedit!
         </p>
-        <button className="btn rounded-full text-[#747474]">View Menu</button>
+        <Button color="warning">View Menu</Button>
       </div>
     </div>
   );
