@@ -7,13 +7,15 @@ import { StoreContextProvider } from "../src/index.js";
 
 function App() {
   return (
-    <StoreContextProvider>
-      <div className="w-11/12 m-auto">
-        <Navbar />
-        <Outlet />
+    <>
+      <StoreContextProvider>
+        <div className="w-11/12 m-auto">
+          <Navbar />
+          <Outlet />
+        </div>
         <Footer />
-      </div>
-    </StoreContextProvider>
+      </StoreContextProvider>
+    </>
   );
 }
 

@@ -4,8 +4,8 @@ import { menu_list } from "../assets/assets";
 function ExploreMenu({ category, setCategory }) {
   return (
     <div className="flex flex-col gap-5 pt-10">
-      <h1 className=" text-3xl font-bold text-[#262626]">Explore our menu</h1>
-      <p className=" w-2/3 text-[#808080]">
+      <h1 className=" text-3xl font-bold text-[#262626]">Choose Food Dish</h1>
+      <p className=" xl:w-2/3 text-[#808080]">
         Choose from a diverse menu featuring a delectable array of dishes. Our
         mission is to stasfy your craving and elevate your dinig expreience, One
         delicious meal at a time.

@@ -2,19 +2,20 @@ import React, { useState } from "react";
 import { Card } from "flowbite-react";
 
 function FoodItem({ id, name, price, image, description }) {
-  const [itemCount, setItemCount] = useState(0);
   return (
     <Card
       imgAlt={name}
       imgSrc={image}
-      className="w-full max-w-xs mx-auto my-4 bg-white border rounded-lg shadow-lg"
+      className="w-full max-w-xs mx-auto my-4 bg-white border rounded-lg shadow-lg "
     >
       <div className="flex flex-col">
         <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
           {name}
         </h5>
-        <p className="mt-2 text-gray-600 dark:text-gray-400">{description}</p>
-        <div className="mb-5 mt-2.5 flex items-center">
+        <p className="mt-2 text-gray-600 dark:text-gray-400 lg:flex hidden">
+          {description}
+        </p>
+        <div className="lg:mb-5 mt-2.5 flex items-center">
           {/* Star Ratings */}
           {[...Array(5)].map((_, index) => (
             <svg
@@ -39,7 +40,7 @@ function FoodItem({ id, name, price, image, description }) {
           </span>
           <a
             href="#"
-            className="rounded-lg bg-cyan-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+            className="rounded-lg bg-cyan-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800 lg:flex hidden"
           >
             Add to cart
           </a>
